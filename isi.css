@@ -310,16 +310,9 @@ span {
   padding-right: 120px;
 }
 
-.art:hover {
-  padding-top: 35px;
-}
 .sum {
   padding: 30px;
   padding-bottom: 5px;
-}
-
-.sum:hover {
-  padding-top: 35px;
 }
 
 .q {
@@ -329,8 +322,5 @@ span {
   padding-bottom: 5px;
 }
 
-.q:hover {
-  padding-top: 35px;
-}
 /* .badan2 {
 } */
