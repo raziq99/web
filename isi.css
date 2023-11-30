@@ -18,14 +18,16 @@ header {
 .nav {
   position: sticky;
   top: 0;
-  z-index: 0;
-  background-color: #b3b1b4;
+  z-index: 10;
+  background-color: rgba(20, 20, 20, 0.2);
+  backdrop-filter: blur(2px);
   font-family: Arial, Helvetica, sans-serif;
   height: 75px;
   transition: height 1s;
   box-shadow: 2px 2px 3px 3px #7f827d;
   font-weight: bold;
 }
+
 .nav ul {
   display: flex;
   margin: 0;
@@ -51,6 +53,7 @@ ol {
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 
 #home img {
@@ -60,9 +63,27 @@ ol {
   border: 3px solid #1d1221;
 }
 
+.typ {
+  display: inline-block;
+}
 #title {
-  padding-top: 30px;
+  display: block;
   text-align: center;
+  border-right: 3px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1.2s steps(18), cursor 0.4s step-end infinite alternate;
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
 }
 .nav img {
   padding: 0;
@@ -141,8 +162,10 @@ nav:hover {
   font-family: Arial, Helvetica, sans-serif;
 }
 #abo {
-  margin: 100px;
-  margin-bottom: 200px;
+  box-shadow: 0px 0px 10px 2px black inset;
+  padding-top: 50px;
+  padding-bottom: 175px;
+  border-radius: 2%;
 }
 
 .info {
@@ -150,6 +173,17 @@ nav:hover {
   padding-top: 10px;
 }
 
+/* section .animate {
+  transition: 1s;
+} */
+
+/* .sec-1 .animate {
+  transform: translateX(-90%);
+} */
+
+/* .sec-1.show-animate .animate {
+  transform: translateX(0);
+} */
 .about {
   justify-content: center;
   margin: 50px;
@@ -162,47 +196,53 @@ nav:hover {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 40px;
-  font-size: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 30px;
   padding-top: 50px;
+  border-bottom: 2px solid black;
 }
 
 .html {
-  border: 1px solid #4a4c48;
   padding: 10px;
   justify-content: center;
-  border-radius: 5%;
+  border-radius: 20px;
   font-size: medium;
   font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 1px 1px 2px 2px #7f827d;
-
+  box-shadow: 2px 4px 5px rgba(0, 0, 0.3);
   background-color: #b3b1b4;
 }
 
+.html:hover {
+  box-shadow: 2px 4px 5px #61677a;
+}
 .css {
-  border: 1px solid #4a4c48;
   justify-content: center;
   padding: 10px;
   font-size: medium;
   font-family: Arial, Helvetica, sans-serif;
-  border-radius: 5%;
-  box-shadow: 1px 1px 2px 2px #7f827d;
+  border-radius: 20px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0.3);
   background-color: #b3b1b4;
+}
+.css:hover {
+  box-shadow: 2px 4px 5px #61677a;
 }
 
 .pic {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 62px;
   justify-content: center;
   display: flex;
-  float: center;
+
   margin: auto;
   padding-bottom: 20px;
   padding-top: 15px;
 }
 
 .picss {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 62px;
   justify-content: center;
   display: flex;
   margin: auto;
@@ -217,6 +257,33 @@ nav:hover {
   justify-content: center;
 }
 
+#projek {
+  display: block;
+  margin: 120px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#projek h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 150px;
+}
+
+#projek h2 {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+
+.to_do_img {
+  width: 550px;
+  height: 300px;
+  object-fit: cover;
+  text-align: center;
+}
+
 #footer {
   background-color: rgb(50, 49, 49);
   padding-left: 15px;
@@ -228,12 +295,11 @@ span {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#icon i {
+#icon {
   padding-left: 10px;
-  gap: 5rem;
-  display: flex;
-  justify-content: center;
   padding-top: 10px;
+  margin: auto;
+  text-align: center;
 }
 
 span {
@@ -258,6 +324,3 @@ span {
   padding-right: 80px;
   padding-bottom: 5px;
 }
-
-/* .badan2 {
-} */
